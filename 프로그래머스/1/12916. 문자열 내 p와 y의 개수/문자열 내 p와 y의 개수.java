@@ -1,7 +1,7 @@
 class Solution {
     boolean solution(String s) {
         boolean answer = true;        
-        String str1 = s.toLowerCase().replaceAll("[^py]","");
+        String str1 = s.toLowerCase();
 //         int pCount = str1.replaceAll("[Yy]","").length();
 //         int yCount = str1.replaceAll("[Pp]","").length();
 //         if (!(pCount == yCount)) {
