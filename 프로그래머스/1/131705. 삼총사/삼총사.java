@@ -3,13 +3,12 @@ class Solution {
         int answer = 0;
         
         for (int i = 0; i < number.length; i++) {
-            for (int j = i +1; j < number.length; j++) {           
-                int sum = number[i] + number[j];                
+            for (int j = i +1; j < number.length; j++) {                           
                 for (int k = j + 1; k < number.length; k++) {
-                    int sum2 = sum + number[k];
-                    if (sum2 == 0) {
+                    int sum = number[i] + number[j] + number[k];
+                    if (sum == 0) {
                         answer++;
-                    }                    
+                    }
                 }
             }
         }
