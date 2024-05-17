@@ -11,14 +11,14 @@ class Solution {
         }
         
         for (int i = 0; i < photo.length; i++) {
+            int sum = 0;
             for (int j = 0; j < photo[i].length; j++) {
-                if (nyMap.containsKey(photo[i][j])) {
-                    answer[i] += nyMap.get(photo[i][j]);
-                } else {                    
-                    answer[i] += 0;
+                Integer yearningValue = nyMap.get(photo[i][j]);
+                if (yearningValue != null) {
+                    sum += yearningValue;
                 }
             }
-            
+            answer[i] = sum;  
         }
         
         return answer;
